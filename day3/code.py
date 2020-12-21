@@ -40,5 +40,13 @@ def pattern(right, down):
                 #print ("Tree")
                 treesFound += 1
     print("Found {0} trees".format(treesFound))
+    return treesFound
+    
 initializeList()
-pattern(3, 1)
+trees = 0
+trees = pattern(1, 1)
+trees *= pattern(3, 1)
+trees *= pattern(5, 1)
+trees *= pattern(7, 1)
+trees *= pattern(1, 2)
+print("Total trees: {0}".format(trees))
